@@ -3,10 +3,7 @@
 # Ask me on facebook: facebook.com/achmad.luthfi.hadi.3
 # rebuild copyright can't make u real programmer :)
 
- import os
-import sys
 import bs4
-import random
 import requests
 from data import cache
 from data.color import *
