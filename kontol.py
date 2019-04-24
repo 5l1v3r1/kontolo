@@ -3,15 +3,14 @@
 # Ask me on facebook: facebook.com/achmad.luthfi.hadi.3
 # rebuild copyright can't make u real programmer :)
 
- import os
+import os
 import sys
-
 import random
 import requests
 from getpass import getpass
 from multiprocessing.pool import ThreadPool
 
- W = '\033[1;37m' 
+W = '\033[1;37m' 
 N = '\033[0m'
 R = '\033[1;37m\033[31m'
 B = '\033[1;37m\033[34m' 
